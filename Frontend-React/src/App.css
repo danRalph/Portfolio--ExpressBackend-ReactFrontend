@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&display=swap');
+
+
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    cursor: none;
+    
+    background-color: black;
+}
+    html *,
+    body * {
+        cursor: none;
+    }
+
+.App-intro {
+    color: white;
+}
+.App {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+#root {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+header {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 20;
+    margin: 0 auto;
+    position: fixed;
+    right: 0;
+  
+}
+    header button {
+        border: none;
+        text-decoration: none;
+        font-size: 0.8em;
+        cursor: pointer;
+        outline: 0;
+        color: blue;
+        margin-right: 20px;
+        background: none;
+        z-index: 20;
+        color: white;
+        letter-spacing: 0.3em;
+        font-weight: 100;
+       padding-top: 1em;
+    }
+    
+.navLeft {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+}
+.navLeft a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4em;
+    letter-spacing: 0.8em;
+    padding-top: 0.3em;
+    z-index: 20;
+}
+
+.cursor {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #fefefe;
+    border-radius: 100%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 250ms ease;
+    transition-property: background-color, opacity, transform, mix-blend-mode;
+    z-index: 9999;
+    mix-blend-mode: difference;
+}
+.cursor--hidden {
+    opacity: 0;
+}
+.cursor--link-hovered {
+    transform: translate(-50%, -50%) scale(0.7);
+    background-color: #fefefe;
+}
+.cursor--clicked {
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: #fefefe;
+}
+
+.box2 {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #777;
+    margin: 20px;
+    opacity: 0.3; 
+    z-index: 9;
+}
+
+.boxRed {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 20px;
+    opacity: 0.4;
+    z-index: 9;
+}
+
+.wrapper {
+    width: 500px;
+    perspective: 300px;
+    height: 300px;
+    margin: 0 auto;
+    left: 31%;
+    top: 30%;
+    background-color: black;
+    position: absolute;
+    
+}
+
+
+.home {
+    width: 100%;
+    height: 100%;
+}
+.home-container {
+    height: 100%;
+}
+.home-header {
+    
+    text-align: center;
+    padding-top: 6.5em;
+}
+        .home-header p {
+            color: white;
+            letter-spacing: 2em;
+            opacity: 0.8;
+            font-size: 1.5em;
+        }
+
+.magnet {
+    transition: transform .3s ease;
+}
+
+.home-content {
+    position: relative;
+    color: white;
+    letter-spacing: 0.4em;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 5.4em;
+    z-index: 10;
+    padding-top: 2px;
+    font-size: 2em;
+    text-shadow: 1px 1px grey;
+}
+
+.home-footer {
+    display: none;
+}
+
+
+.about {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+}
+.about-container {
+    background-color: black;
+    height: 100%;
+    position: relative;
+    z-index: 11;
+}
+.about-header {
+    text-align: center;
+    padding-top: 6.5em;
+    padding-left: 2em;
+}
+
+    .about-header p {
+        color: white;
+        letter-spacing: 2em;
+        opacity: 0.8;
+        font-size: 1.5em;
+    }
+    .react-3d-carousel {
+       z-index: 13;
+    }
+.about-content {
+    padding-top: 4em;
+    background-color: black;
+    position: relative;
+    z-index: 12;
+}
+    
+
+.about-para {
+    text-align: center;
+    padding-top: 2em;
+}
+
+    .about-para p {
+        font-size: 14px;
+        color: white;
+        line-height: 2em;
+        letter-spacing: 0.3em;
+    }
+
+.imageCaro {
+    position: relative;
+
+}
+    .imageCaro h3,
+    .imageCaro2 h3,
+    .imageCaro3 h3,
+    .imageCaro4 h3,
+    .imageCaro5 h3{
+        position: absolute;
+        top: 100px;
+        text-align: left;
+        width: 100%;
+        
+    }
+
+        .imageCaro h3 span,
+        .imageCaro2 h3 span,
+        .imageCaro3 h3 span,
+        .imageCaro4 h3 span,
+        .imageCaro5 h3 span {
+            color: white;
+            font: bold 24px/45px Montserrat, Sans-Serif;
+            letter-spacing: -1px;
+            background: rgb(0, 0, 0); /* fallback color */
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+        }
+.imageCaro h3 span.spacer {
+    padding: 0 5px;
+}
+.caro {
+    background-color: #fff;
+    padding: 4px;
+}
+
+
+.projects {
+    width: 100%;
+}
+.projects-container {
+    height: 100%;
+    background-color: black;
+}
+    .projects-container h3 {
+        color: white;
+        margin: 0;
+        padding-bottom: 1em;
+        padding-right: 9em;
+        letter-spacing: 1.3em;
+        opacity: 0.8;
+    }
+
+.projects-header {
+    margin: 0 auto;
+   
+    width: 90%;
+    padding-top: 6.5em;
+}
+.projects-header p {
+    color: white;
+    letter-spacing: 2em;
+    opacity: 0.8;
+    font-size: 1.5em;
+}
+
+.projects-content {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 60%;
+    padding-left: 8em;
+    padding-right: 8em;
+    font-size: 14px;
+    color: white;
+    line-height: 2em;
+    letter-spacing: 0.3em;
+    text-align: right;
+}
+
+
+.cardWrapper {
+    width: 420px;
+    height: 280px;
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    padding-left: 1em;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+}
+
+.cardFace {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
+}
+.cardFace img {
+    width: 100%;
+}
+
+.front {
+    background-color: black;
+}
+
+.back {
+    background-color: black;
+}
+
+.row {
+    display: flex;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.column {
+    flex: 50%;
+}
+
+.main {
+    text-align: center;
+    height: 100px;
+    padding-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: black;
+  
+}
+
+.image {
+    height: 100px;
+    width: 100px;
+    font-size: 25px;
+    background: none;
+    margin: 10px;
+    display: inline-block;
+    line-height: 100px;
+}
+
+.image-container {
+    vertical-align: middle;
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 27%;
+}
+
+.prev, .next {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100%;
+    cursor: pointer;
+    color: white;
+    transition: 0.6s ease;
+}
+
+.next {
+    margin-left: 5px;
+}
+
+.prev {
+    margin-right: 5px;
+}
+
+    .prev:hover, .next:hover {
+        color: red;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+    }
+
+
+input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #F08080;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    input[type=submit]:hover {
+        background-color: #CD5C5C;
+    }
+
+    .Contact {
+        text-align: center;
+        
+        background-color: black;
+    }
+.contact-header {
+    text-align: center;
+    padding-top: 6.5em;
+    padding-left: 2em;
+}
+
+    .contact-header p {
+        color: white;
+        letter-spacing: 2em;
+        opacity: 0.8;
+        font-size: 1.5em;
+    }
+.contact-content {
+    text-align: center;
+    padding-top: 2em;
+}
+    .contact-content p {
+        font-size: 14px;
+        color: white;
+        line-height: 2em;
+        letter-spacing: 0.3em;
+
+    }
+
+
+.container {
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    letter-spacing: 0.4em;
+    padding: 20px;
+    width: 60%;
+    display: inline-block;
+    margin-top: 2em;   
+}
+
+.footer {
+    overflow: hidden;
+    padding-bottom: 3em;
+    padding-top: 7em;
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+    .footer p {
+        opacity: 0.6;
+        letter-spacing: 1em;
+        font-weight: 300;
+        font-size: 0.7rem;
+    }
+.footIcon {
+    padding-top: 1em;
+    display: none;
+}
+.footIcon a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4em;
+    letter-spacing: 0.4em;
+    opacity: 0.6;
+}
+
+
+
+
+@media screen and (max-device-width: 600px) {
+    header {
+        justify-content: center;
+        position: relative;
+    }
+    header button p {
+        font-size: 0.9em;
+    }
+    .navLeft {
+        padding-right: 0.8em;
+        display: none;
+    }
+        .navLeft a {
+            font-size: 1em;
+            padding-top: 0.4em;
+            padding-right: 0.2em;
+           
+        }
+    header button {
+        font-size: 0.8em;
+        letter-spacing: 0.1em;
+        margin: 0.5em;
+      
+    }
+    .wrapper {
+        width: 250px;
+        height: 150px;
+        
+        top: 32%;
+        left: 17%;
+    }
+    .box2,
+    .boxRed {
+        height: 60px;
+        width: 60px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        margin-left: 10px;
+        margin-right: 10px; 
+    }
+    .animated {
+        display: none;
+    }
+
+    .home-content {
+        font-size: 1em;
+        padding-top: 7.8em;
+    }
+        .home-content p {
+            padding-left: 1em;
+        }
+    .home-footer {
+        display: block;
+        color: white;
+        font-size: 0.8em;
+        padding-top: 7em;
+    } .home-footer p {
+          opacity: 0.6;
+          padding-top: 6em;
+      }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .column {
+        max-width: 100%;
+    }
+    .home-header,
+    .about-header,
+    .projects-header,
+    .contact-header {
+        padding-top: 2em;
+    }
+
+    .home-header p,
+    .about-header p,
+    .projects-header p,
+    .contact-header p {
+        font-size: 0.9em;
+        text-align: center;
+        padding-top: 3em;
+    }
+    .home-header p {
+        padding-left: 2em;
+    }
+    .projects-header p {
+        padding-left: 1.4em;
+    }
+
+    .about-para p {
+        font-size: 0.7em;
+    }
+    .imageCaro h3,
+    .imageCaro2 h3,
+    .imageCaro3 h3,
+    .imageCaro4 h3,
+    .imageCaro5 h3{
+        display: none;
+    }
+    .caro {
+        height: 200px;
+    }
+    .projects-content {
+        font-size: 0.7em;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .projects-content p {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+    
+    .projects-container h3 {
+        font-size: 0.6em;
+        margin-bottom: 1em;
+        padding-right: 14em;
+    }
+    .cardFace {
+        width: 300px;
+        height: 300px;
+        padding-left: 1em;
+        padding-top: 1.5em;
+       
+    }
+     .cardWrapper {
+         float: none;
+         width: 320px;
+         height: 250px;
+
+     }
+   
+    .image-container {
+        width: 70%;
+    }
+    .image {
+        height: 70px;
+        width: 70px;
+    }
+
+    .contact-content p {
+        font-size: 0.7em;
+    }
+    .container {
+        padding-bottom: 6em;
+    }
+    .container label {
+        font-size: 0.8em;
+    }
+
+    .footer {
+        padding-top: 0;
+        padding-bottom: 1em;
+        position: relative;
+        z-index: 20;
+    }
+    .footer p {
+        font-size: 0.5em;
+    }
+    .footIcon {
+        display: flex;
+        justify-content: center;
+    }
+    .footIcon a {
+        font-size: 1.4em;
+    }
+}
